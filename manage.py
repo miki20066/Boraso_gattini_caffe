@@ -1,19 +1,23 @@
 #!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
+"""
+Utility da riga di comando per le attività amministrative di Boraso Gattini Cafe.
+Sviluppato per la gestione del sistema backend e database.
+"""
 import os
 import sys
 
 
 def main():
-    """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'CREAZZO_GattiniCafe.settings')
+    """Esecuzione delle attività amministrative."""
+    # Sostituito 'CREAZZO_GattiniCafe.settings' con il tuo nuovo percorso
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Boraso_gattini_caffe.settings')
+
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(
-            "Couldn't import Django. Are you sure it's installed and "
-            "available on your PYTHONPATH environment variable? Did you "
-            "forget to activate a virtual environment?"
+            "Impossibile importare Django. Assicurati che sia installato e "
+            "disponibile nel tuo PYTHONPATH. Hai attivato il virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
 
