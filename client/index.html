@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boraso Gattini Cafe | Gestionale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>🐾 Gattini Cafe 🐾</h1>
+    <p>Sistema Ordinazioni Felini</p>
+</header>
+
+<main>
+    <section id="auth-section">
+        <h3>Accesso Riservato</h3>
+        <div class="input-group">
+            <input type="text" id="username" placeholder="Nome utente">
+            <input type="password" id="password" placeholder="Password">
+            <button class="btn-primary" onclick="login()">Entra</button>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="menu-section">
+        <h3>Catalogo Prodotti</h3>
+        <button class="btn-secondary" onclick="loadProdotti()">Aggiorna Menu</button>
+        <ul id="prodotti-list" class="list-container"></ul>
+    </section>
+
+    <hr>
+
+    <section id="order-form">
+        <h3>Nuova Ordinazione</h3>
+        <div class="form-row">
+            <input type="number" id="prodotto_id" placeholder="Codice Prodotto">
+            <input type="number" id="quantita" placeholder="Q.tà">
+            <button id="send-btn" onclick="inviaNuovoOrdine()">Conferma Ordine</button>
+        </div>
+        <div id="result" class="message-area"></div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Boraso Gattini Cafe - Progetto API REST</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

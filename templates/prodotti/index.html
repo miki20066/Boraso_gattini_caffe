@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Tutti i prodotti</h1>
+
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Descrizione</th>
+        <th>Prezzo</th>
+        <th>Disponibile</th>
+    </tr>
+
+    {% for item in object_list %}
+    <tr>
+        <td>{{ item.nome }}</td>
+        <td>{{ item.descrizione }}</td>
+        <td>{{ item.prezzo }} €</td>
+        <td>
+            {% if item.disponibile %}
+                ✔️
+            {% else %}
+                ❌
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

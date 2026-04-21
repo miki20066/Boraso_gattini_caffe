@@ -1,0 +1,124 @@
+/* Palette colori personalizzata */
+:root {
+    --primary-color: #6366f1; /* Un blu/viola moderno */
+    --primary-hover: #4f46e5;
+    --bg-color: #0f172a;      /* Sfondo scuro elegante */
+    --card-bg: #1e293b;       /* Sfondo schede */
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #fbbf24;        /* Giallo per i dettagli "Gattini" */
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+h2 {
+    margin-top: 40px;
+    color: var(--text-main);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 15px;
+    font-size: 1.2rem;
+}
+
+/* Input stilizzati */
+input {
+    padding: 12px 16px;
+    margin: 8px 0;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background-color: #0f172a;
+    color: white;
+    width: 250px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Bottoni moderni */
+button {
+    padding: 12px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    transition: transform 0.1s, background 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Lista prodotti a griglia (molto diversa dall'originale) */
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    padding: 0;
+}
+
+li {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: hover 0.3s;
+}
+
+li:hover {
+    border-color: var(--accent);
+}
+
+/* Feedback messaggi */
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    text-align: center;
+    min-width: 200px;
+}
+
+.success { color: #4ade80; }
+.error { color: #f87171; }
+
+/* Separatore */
+hr {
+    width: 100%;
+    max-width: 800px;
+    border: 0;
+    height: 1px;
+    background: #334155;
+    margin: 40px 0;
+}
