@@ -9,7 +9,7 @@ Database: Inserire gattini_cafe.db nella root.
 
 Avvio: python manage.py runserver
 
-🔐 Sicurezza & Auth
+🔐 Sicurezza & Auth 
 JWT (Simple JWT): Login, Refresh e registrazione.
 
 Header: Authorization: Bearer <token>
